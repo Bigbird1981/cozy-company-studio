@@ -4,6 +4,15 @@ function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('
     if (!e.target.closest('nav') && !e.target.closest('#mobileMenu')) closeMenu();
   });
 
+  document.querySelectorAll('.strip-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      document.querySelectorAll('.strip-item.active').forEach(function(activeItem) {
+        if (activeItem !== item) activeItem.classList.remove('active');
+      });
+      item.classList.toggle('active');
+    });
+  });
+
   function openModal(id) {
     document.getElementById('modal-' + id).classList.add('open');
     document.body.style.overflow = 'hidden';
