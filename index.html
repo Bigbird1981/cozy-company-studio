@@ -257,43 +257,58 @@
       <div class="contact-item"><strong>Reactietijd</strong><br>Binnen 2 werkdagen</div>
     </div>
   </div>
-  <div class="contact-right">
-    <div class="form-row">
-      <div class="form-group">
-        <label>Voornaam</label>
-        <input type="text" placeholder="Naam">
-      </div>
-      <div class="form-group">
-        <label>Organisatie</label>
-        <input type="text" placeholder="Bedrijfsnaam">
-      </div>
+  <form class="contact-right" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value="9c12f8af-ad9e-4eb8-90c0-2cd06621a24f">
+  <input type="hidden" name="subject" value="Nieuwe aanvraag via Cozy Company Studio">
+  <input type="checkbox" name="botcheck" style="display: none;">
+
+  <div class="form-row">
+    <div class="form-group">
+      <label>Voornaam</label>
+      <input type="text" name="voornaam" placeholder="Naam" required>
     </div>
     <div class="form-group">
-      <label>E-mailadres</label>
-      <input type="email" placeholder="u@organisatie.nl">
+      <label>Organisatie</label>
+      <input type="text" name="organisatie" placeholder="Bedrijfsnaam" required>
     </div>
-    <div class="form-group">
-      <label>Telefoonnummer <span class="form-optional">(optioneel)</span></label>
-      <input type="tel" placeholder="+31 6 00 00 00 00">
-    </div>
-    <div class="form-group">
-      <label>Gewenste oplage</label>
-      <select>
-        <option value="">Selecteer een oplage</option>
-        <option>250 – 499 stuks (€9,50 p.st.)</option>
-        <option>500 – 999 stuks (€8,50 p.st.)</option>
-        <option>1.000 – 2.499 stuks (€7,75 p.st.)</option>
-        <option>2.500+ stuks (€7,25 p.st.)</option>
-        <option>Nog niet zeker</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label>Uw bericht</label>
-      <textarea placeholder="Vertel ons over uw organisatie en waarvoor u het kleurboek wilt inzetten..."></textarea>
-    </div>
-    <p class="form-consent">Door uw aanvraag te versturen gaat u akkoord met onze <a href="#hero" onclick="openModal('privacy')">Privacyverklaring</a> en <a href="#" onclick="openModal('av')">Algemene Voorwaarden</a>.</p>
-    <button class="form-submit" style="margin-top:14px;">Aanvraag versturen</button>
   </div>
+
+  <div class="form-group">
+    <label>E-mailadres</label>
+    <input type="email" name="email" placeholder="u@organisatie.nl" required>
+  </div>
+
+  <div class="form-group">
+    <label>Telefoonnummer <span class="form-optional">(optioneel)</span></label>
+    <input type="tel" name="telefoon" placeholder="+31 6 00 00 00 00">
+  </div>
+
+  <div class="form-group">
+    <label>Gewenste oplage</label>
+    <select name="gewenste_oplage" required>
+      <option value="">Selecteer een oplage</option>
+      <option>250 – 499 stuks (€9,50 p.st.)</option>
+      <option>500 – 999 stuks (€8,50 p.st.)</option>
+      <option>1.000 – 2.499 stuks (€7,75 p.st.)</option>
+      <option>2.500+ stuks (€7,25 p.st.)</option>
+      <option>Nog niet zeker</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Uw bericht</label>
+    <textarea name="bericht" placeholder="Vertel ons over uw organisatie en waarvoor u het kleurboek wilt inzetten..." required></textarea>
+  </div>
+
+  <p class="form-consent">
+    Door uw aanvraag te versturen gaat u akkoord met onze
+    <a href="#hero" onclick="openModal('privacy')">Privacyverklaring</a>
+    en
+    <a href="#" onclick="openModal('av')">Algemene Voorwaarden</a>.
+  </p>
+
+  <button type="submit" class="form-submit" style="margin-top:14px;">Aanvraag versturen</button>
+</form>
 </section>
 
 <!-- FOOTER -->
