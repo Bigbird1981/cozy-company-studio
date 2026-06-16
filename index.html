@@ -212,7 +212,7 @@
 
     <div class="pricing-cta-wrap">
       <a href="#contact" class="pricing-main-cta">Vraag een offerte aan</a>
-      <p class="pricing-footer-note">Prijzen zijn inclusief ontwerp, illustraties, revisieronde, druk en verzending. Exclusief BTW.</p>
+      <p class="pricing-footer-note">Prijzen zijn inclusief ontwerp, illustraties, revisieronde, druk en levering binnen Nederland.</p>
     </div>
   </div>
 </section>
@@ -257,7 +257,7 @@
       <div class="contact-item"><strong>Reactietijd</strong><br>Binnen 2 werkdagen</div>
     </div>
   </div>
-  <form class="contact-right" action="https://api.web3forms.com/submit" method="POST">
+  <form id="contactForm" class="contact-right" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="9c12f8af-ad9e-4eb8-90c0-2cd06621a24f">
   <input type="hidden" name="subject" value="Nieuwe aanvraag via Cozy Company Studio">
   <input type="checkbox" name="botcheck" style="display: none;">
@@ -320,6 +320,14 @@
     <a href="voorwaarden.html" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a>
   </div>
 </footer>
+
+<div class="modal-overlay" id="modal-contact-success" onclick="closeModalOutside(event, 'contact-success')">
+  <div class="modal-box contact-success-box" role="dialog" aria-modal="true" aria-labelledby="contact-success-title">
+    <h2 id="contact-success-title">Aanvraag verstuurd</h2>
+    <p>Dank u wel. Uw bericht is succesvol verstuurd. We nemen binnen twee werkdagen contact met u op.</p>
+    <button type="button" class="modal-ok" onclick="closeContactSuccessModal()">Ok</button>
+  </div>
+</div>
 
 <script src="js/script.js" defer></script>
 
