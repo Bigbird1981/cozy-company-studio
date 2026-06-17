@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cozy Company Studio — Live in augustus 2026</title>
+<title>Cozy Company Studio — Live eind augustus 2026</title>
 <link rel="stylesheet" href="css/style.css">
 
-  <meta name="description" content="Cozy Company Studio gaat in augustus 2026 live met op maat gemaakte kleurboeken voor organisaties, bedrijven en instellingen.">
+  <meta name="description" content="Cozy Company Studio gaat eind augustus 2026 live met op maat gemaakte kleurboeken voor organisaties, bedrijven en instellingen.">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Cozy Company Studio — Live in augustus 2026">
+  <meta property="og:title" content="Cozy Company Studio — Live eind augustus 2026">
   <meta property="og:description" content="Een warme teaser voor op maat gemaakte kleurboeken die organisaties pagina voor pagina tot leven brengen.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="images/gallery/gallery-01.png">
@@ -30,20 +30,20 @@
     }
 
     .launch-ribbon {
-      min-height: 108px;
+      min-height: 96px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
       background: linear-gradient(135deg, var(--pale-sage), #F5EDE3);
-      color: var(--ink);
-      padding: 24px 24px;
-      border-bottom: 4px solid rgba(196,113,74,0.28);
+      color: var(--sage);
+      padding: 20px 24px;
+      border-bottom: 4px solid rgba(196,113,74,0.24);
     }
 
     .launch-ribbon h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(38px, 5.7vw, 74px);
+      font-size: clamp(36px, 5.2vw, 68px);
       line-height: 1;
       letter-spacing: -0.03em;
       font-weight: 700;
@@ -58,13 +58,13 @@
     }
 
     .teaser-copy {
-      padding: clamp(24px, 3vw, 42px) 60px 28px;
+      padding: clamp(14px, 2vw, 26px) 60px 24px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
     }
 
-    .teaser-copy .hero-eyebrow { margin-bottom: 14px; }
+    .teaser-copy .hero-eyebrow { margin-bottom: 12px; }
 
     .teaser-copy .hero-title {
       font-size: clamp(32px, 4.1vw, 54px);
@@ -78,7 +78,7 @@
       line-height: 1.65;
     }
 
-    .teaser-copy .hero-occasions { margin-bottom: 22px; }
+    .teaser-copy .hero-occasions { margin-bottom: 20px; }
 
     .teaser-status {
       display: grid;
@@ -112,7 +112,7 @@
 
     .teaser-preview {
       background: var(--pale-sage);
-      padding: clamp(22px, 3vw, 38px) clamp(28px, 4vw, 56px) 28px;
+      padding: clamp(16px, 2.4vw, 30px) clamp(28px, 4vw, 56px) 26px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -174,18 +174,30 @@
       font-size: 12px;
     }
 
+    .teaser-footer a {
+      color: var(--cream);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(250,247,242,0.35);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .teaser-footer a:hover {
+      color: var(--blush);
+      border-color: var(--blush);
+    }
+
     @media (max-width: 1000px) {
       .teaser-main { grid-template-columns: 1fr; }
-      .teaser-copy { padding: 30px 24px 24px; }
-      .teaser-preview { padding: 24px 24px 30px; }
-      .launch-ribbon { min-height: 92px; }
+      .teaser-copy { padding: 24px 24px 22px; }
+      .teaser-preview { padding: 22px 24px 28px; }
+      .launch-ribbon { min-height: 88px; }
       .teaser-footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
     }
 
     @media (max-width: 620px) {
       .teaser-shell { min-height: auto; }
-      .launch-ribbon { min-height: 82px; padding: 22px 20px; }
-      .launch-ribbon h1 { font-size: clamp(34px, 11vw, 54px); }
+      .launch-ribbon { min-height: 78px; padding: 20px 20px; }
+      .launch-ribbon h1 { font-size: clamp(32px, 10vw, 50px); }
       .teaser-status { grid-template-columns: 1fr; }
       .teaser-gallery { grid-template-columns: repeat(3, 46vw); overflow-x: auto; padding: 8px 24px 18px; margin: 0 -24px; }
       .teaser-card { min-width: 0; }
@@ -201,7 +213,7 @@
 
 <main class="teaser-shell">
   <header class="launch-ribbon" aria-label="Lancering">
-    <h1>Live in augustus 2026</h1>
+    <h1>Live eind Augustus 2026</h1>
   </header>
 
   <section class="teaser-main" aria-label="Teaser Cozy Company Studio">
@@ -237,7 +249,7 @@
         </div>
         <div class="teaser-status-item">
           <strong>Aanvragen</strong>
-          <span>Openen bij de livegang in augustus.</span>
+          <span>Openen bij de livegang eind augustus.</span>
         </div>
       </div>
     </div>
@@ -269,7 +281,8 @@
 
   <footer class="teaser-footer">
     <div class="footer-logo">Cozy Company <span>Studio</span></div>
-    <div>© 2026 Cozy Company Studio · Live in augustus 2026</div>
+    <div>Contact: <a href="mailto:hallo@cozycompanystudio.nl">hallo@cozycompanystudio.nl</a></div>
+    <div>© 2026 Cozy Company Studio · Live eind augustus 2026</div>
   </footer>
 </main>
 
