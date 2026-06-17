@@ -43,7 +43,7 @@
 
     .launch-ribbon h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 5.2vw, 68px);
+      font-size: clamp(27px, 3.9vw, 51px);
       line-height: 1;
       letter-spacing: -0.03em;
       font-weight: 700;
@@ -67,8 +67,8 @@
     .teaser-copy .hero-eyebrow { margin-bottom: 12px; }
 
     .teaser-copy .hero-title {
-      font-size: clamp(32px, 4.1vw, 54px);
-      max-width: 640px;
+      font-size: clamp(22px, 2.87vw, 38px);
+      max-width: 560px;
       margin-bottom: 16px;
     }
 
@@ -78,36 +78,41 @@
       line-height: 1.65;
     }
 
-    .teaser-copy .hero-occasions { margin-bottom: 20px; }
+    .teaser-copy .hero-occasions { margin-bottom: 18px; }
 
-    .teaser-status {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      max-width: 660px;
-      margin-top: 0;
+    .teaser-mail-cta {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      width: fit-content;
+      max-width: 100%;
+      border: 1px solid rgba(196,113,74,0.28);
+      background: rgba(255,254,251,0.78);
+      padding: 14px 18px;
     }
 
-    .teaser-status-item {
-      border: 1px solid rgba(196,113,74,0.24);
-      background: rgba(255,254,251,0.72);
-      padding: 12px 14px;
-    }
-
-    .teaser-status-item strong {
-      display: block;
+    .teaser-mail-cta span {
       font-size: 10px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--terracotta);
-      margin-bottom: 5px;
+      font-weight: 500;
     }
 
-    .teaser-status-item span {
-      display: block;
-      font-size: 13px;
-      color: var(--mid-gray);
-      line-height: 1.4;
+    .teaser-mail-cta a {
+      color: var(--ink);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(19px, 2vw, 26px);
+      line-height: 1.2;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(196,113,74,0.45);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .teaser-mail-cta a:hover {
+      color: var(--terracotta);
+      border-color: var(--terracotta);
     }
 
     .teaser-preview {
@@ -197,8 +202,7 @@
     @media (max-width: 620px) {
       .teaser-shell { min-height: auto; }
       .launch-ribbon { min-height: 78px; padding: 20px 20px; }
-      .launch-ribbon h1 { font-size: clamp(32px, 10vw, 50px); }
-      .teaser-status { grid-template-columns: 1fr; }
+      .launch-ribbon h1 { font-size: clamp(24px, 7.5vw, 38px); }
       .teaser-gallery { grid-template-columns: repeat(3, 46vw); overflow-x: auto; padding: 8px 24px 18px; margin: 0 -24px; }
       .teaser-card { min-width: 0; }
     }
@@ -238,19 +242,9 @@
         <span class="occasion-tag">Klantgeschenken</span>
         <span class="occasion-tag">Defining moments</span>
       </div>
-      <div class="teaser-status" aria-label="Kerninformatie">
-        <div class="teaser-status-item">
-          <strong>Nu</strong>
-          <span>Een warme preview van stijl en concept.</span>
-        </div>
-        <div class="teaser-status-item">
-          <strong>Straks</strong>
-          <span>Voorbeelden, prijzen en intake op één plek.</span>
-        </div>
-        <div class="teaser-status-item">
-          <strong>Aanvragen</strong>
-          <span>Openen bij de livegang eind augustus.</span>
-        </div>
+      <div class="teaser-mail-cta" aria-label="Contact per e-mail">
+        <span>Vragen of alvast kennismaken?</span>
+        <a href="mailto:hallo@cozycompanystudio.nl">hallo@cozycompanystudio.nl</a>
       </div>
     </div>
 
