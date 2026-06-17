@@ -112,6 +112,33 @@
       border-color: var(--terracotta);
     }
 
+    .desktop-qr {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: fit-content;
+      margin-top: 18px;
+      padding: 12px 14px;
+      border: 1px solid rgba(107,127,110,0.22);
+      background: rgba(255,254,251,0.66);
+    }
+
+    .desktop-qr img {
+      width: 86px;
+      height: 86px;
+      display: block;
+      background: var(--warm-white);
+    }
+
+    .desktop-qr span {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
     .teaser-preview {
       background: var(--pale-sage);
       padding: 0 clamp(28px, 4vw, 56px) 26px;
@@ -190,6 +217,7 @@
       .teaser-main { grid-template-columns: 1fr; }
       .teaser-copy { padding: 0 24px 22px; }
       .teaser-preview { padding: 0 24px 28px; }
+      .desktop-qr { display: none; }
       .teaser-footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
     }
 
@@ -234,6 +262,10 @@
       <div class="teaser-mail-cta" aria-label="Contact per e-mail">
         <span>Vragen of alvast kennismaken?</span>
         <a href="mailto:hallo@cozycompanystudio.nl">hallo@cozycompanystudio.nl</a>
+      </div>
+      <div class="desktop-qr" aria-label="QR-code om de website op mobiel te bekijken">
+        <img src="images/qr-mobile.svg" alt="QR-code naar Cozy Company Studio">
+        <span>Bekijk<br>op mobiel</span>
       </div>
     </div>
 
