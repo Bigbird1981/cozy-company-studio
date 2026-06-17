@@ -15,221 +15,248 @@
   <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="favicon/site.webmanifest">
 
-</head>
-<body>
+  <style>
+    body.teaser-page { min-height: 100vh; overflow-x: hidden; }
+    body.teaser-page nav { justify-content: flex-start; }
+    body.teaser-page .nav-links,
+    body.teaser-page .nav-hamburger,
+    body.teaser-page .mobile-menu { display: none; }
 
-<!-- NAV -->
+    .teaser-shell {
+      min-height: calc(100vh - 61px);
+      padding-top: 61px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .launch-ribbon {
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 36px 24px;
+      border-bottom: 5px solid var(--terracotta);
+    }
+
+    .launch-ribbon h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 7vw, 92px);
+      line-height: 1;
+      letter-spacing: -0.03em;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .teaser-main {
+      display: grid;
+      grid-template-columns: minmax(0, 0.95fr) minmax(420px, 1.05fr);
+      min-height: 0;
+      background: var(--cream);
+    }
+
+    .teaser-copy {
+      padding: clamp(36px, 5vw, 70px) 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .teaser-copy .hero-title {
+      font-size: clamp(34px, 4.6vw, 62px);
+      max-width: 640px;
+      margin-bottom: 20px;
+    }
+
+    .teaser-copy .hero-subtitle {
+      max-width: 610px;
+      margin-bottom: 18px;
+    }
+
+    .teaser-status {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      max-width: 660px;
+      margin-top: 12px;
+    }
+
+    .teaser-status-item {
+      border: 1px solid rgba(196,113,74,0.24);
+      background: rgba(255,254,251,0.72);
+      padding: 14px 16px;
+    }
+
+    .teaser-status-item strong {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 5px;
+    }
+
+    .teaser-status-item span {
+      display: block;
+      font-size: 13px;
+      color: var(--mid-gray);
+      line-height: 1.45;
+    }
+
+    .teaser-preview {
+      background: var(--pale-sage);
+      padding: clamp(28px, 4vw, 56px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 22px;
+      overflow: hidden;
+    }
+
+    .teaser-preview-header {
+      max-width: 520px;
+    }
+
+    .teaser-preview-header .section-intro {
+      margin-bottom: 0;
+      max-width: 520px;
+    }
+
+    .teaser-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      align-items: center;
+    }
+
+    .teaser-card {
+      background: rgba(255,254,251,0.78);
+      padding: 12px;
+      box-shadow: 8px 12px 28px rgba(28,26,23,0.12);
+      transform: rotate(-2deg);
+    }
+
+    .teaser-card:nth-child(2) { transform: rotate(1.5deg) translateY(10px); }
+    .teaser-card:nth-child(3) { transform: rotate(-1deg) translateY(-4px); }
+    .teaser-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: top;
+      background: white;
+    }
+
+    .teaser-footer {
+      background: var(--ink);
+      color: rgba(250,247,242,0.55);
+      padding: 22px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 12px;
+    }
+
+    @media (max-width: 1000px) {
+      .teaser-main { grid-template-columns: 1fr; }
+      .teaser-copy { padding: 40px 24px 28px; }
+      .teaser-preview { padding: 28px 24px 38px; }
+      .launch-ribbon { min-height: 120px; }
+      .teaser-footer { padding: 22px 24px; flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 620px) {
+      .teaser-shell { min-height: auto; }
+      .launch-ribbon { min-height: 105px; padding: 28px 20px; }
+      .teaser-status { grid-template-columns: 1fr; }
+      .teaser-gallery { grid-template-columns: repeat(3, 46vw); overflow-x: auto; padding: 8px 24px 18px; margin: 0 -24px; }
+      .teaser-card { min-width: 0; }
+    }
+  </style>
+
+</head>
+<body class="teaser-page">
+
 <nav>
-  <a href="#hero" class="logo">Cozy Company <span>Studio</span></a>
-  <ul class="nav-links">
-    <li><a href="#preview">Sneak preview</a></li>
-    <li><a href="#launch">Augustus 2026</a></li>
-    <li><a href="#about">Wat komt eraan</a></li>
-  </ul>
-  <div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </div>
+  <a href="#" class="logo">Cozy Company <span>Studio</span></a>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#preview" onclick="closeMenu()">Sneak preview</a>
-  <a href="#launch" onclick="closeMenu()">Augustus 2026</a>
-  <a href="#about" onclick="closeMenu()">Wat komt eraan</a>
-</div>
+<main class="teaser-shell">
+  <header class="launch-ribbon" aria-label="Lancering">
+    <h1>Live in augustus 2026</h1>
+  </header>
 
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Live in augustus 2026</p>
-    <h1 class="hero-title">
-      Iets warms,<br>
-      herkenbaars en <em>heel bijzonders</em><br>
-      is onderweg.
-    </h1>
-    <p class="hero-subtitle">
-      Cozy Company Studio maakt gepersonaliseerde kleurboeken voor organisaties: exclusieve boeken met rustige, uitnodigende illustraties rond herkenbare werkplekken, producten, collega’s en kleine momenten uit het dagelijkse werk.
-    </p>
-    <p class="hero-subtitle">
-      Achter de schermen bouwen we aan de volledige website, voorbeeldpagina’s en een slimme intake. Vanaf augustus 2026 kunt u hier ontdekken hoe uw organisatie pagina voor pagina tot leven kan komen.
-    </p>
-    <div class="hero-occasions">
-      <span class="occasion-tag">Kerst</span>
-      <span class="occasion-tag">Employee shop</span>
-      <span class="occasion-tag">Jubilea</span>
-      <span class="occasion-tag">Beurzen</span>
-      <span class="occasion-tag">Klantgeschenken</span>
-      <span class="occasion-tag">Defining moments</span>
-    </div>
-    <a href="#preview" class="hero-cta">Bekijk de preview</a>
-  </div>
-
-  <div class="hero-right">
-    <div class="second-book">
-      <div class="book-spine"></div>
-      <div class="book-content" style="margin-left:18px; padding:14px;">
-        <div style="font-size:7px; letter-spacing:0.1em; color:#aaa; text-transform:uppercase; border-bottom:1px solid #eee; padding-bottom:5px; margin-bottom:7px;">Luchtvaart — editie 2026</div>
-        <div style="flex:1; display:flex; align-items:center; justify-content:center;">
-          <svg width="80" height="90" viewBox="0 0 80 90" fill="none">
-            <rect x="10" y="5" width="60" height="70" rx="2" stroke="#ddd" stroke-width="1.5"/>
-            <line x1="20" y1="25" x2="60" y2="25" stroke="#e8c4a0" stroke-width="2"/>
-            <circle cx="40" cy="50" r="12" stroke="#c0c0c0" stroke-width="1.5"/>
-            <circle cx="25" cy="65" r="4" stroke="#e8c4a0" stroke-width="1.5"/>
-          </svg>
+  <section class="teaser-main" aria-label="Teaser Cozy Company Studio">
+    <div class="teaser-copy">
+      <p class="hero-eyebrow">Op maat gemaakte kleurboeken voor organisaties</p>
+      <h2 class="hero-title">
+        Uw organisatie,<br>
+        <em>pagina voor pagina</em><br>
+        tot leven gebracht.
+      </h2>
+      <p class="hero-subtitle">
+        Cozy Company Studio maakt exclusieve kleurboeken rond herkenbare werkplekken, producten, collega’s en kleine momenten uit het dagelijkse werk.
+      </p>
+      <p class="hero-subtitle">
+        Achter de schermen bouwen we aan de volledige website, voorbeeldpagina’s en een slimme intake. Het contactformulier blijft gesloten tot de officiële livegang.
+      </p>
+      <div class="hero-occasions">
+        <span class="occasion-tag">Kerst</span>
+        <span class="occasion-tag">Employee shop</span>
+        <span class="occasion-tag">Jubilea</span>
+        <span class="occasion-tag">Beurzen</span>
+        <span class="occasion-tag">Klantgeschenken</span>
+        <span class="occasion-tag">Defining moments</span>
+      </div>
+      <div class="teaser-status" aria-label="Kerninformatie">
+        <div class="teaser-status-item">
+          <strong>Nu</strong>
+          <span>Een warme preview van stijl en concept.</span>
+        </div>
+        <div class="teaser-status-item">
+          <strong>Straks</strong>
+          <span>Voorbeelden, prijzen en intake op één plek.</span>
+        </div>
+        <div class="teaser-status-item">
+          <strong>Aanvragen</strong>
+          <span>Openen bij de livegang in augustus.</span>
         </div>
       </div>
     </div>
-    <div class="book-mockup">
-      <div class="book-spine"></div>
-      <div class="book-content">
-        <div class="book-logo-area">Hightech industrie — kleurboek 2026</div>
-        <div class="coloring-preview">
-          <svg width="150" height="175" viewBox="0 0 150 175" fill="none">
-            <rect x="85" y="40" width="50" height="8" rx="1" stroke="#c8c8c8" stroke-width="1.5"/>
-            <rect x="85" y="60" width="50" height="8" rx="1" stroke="#c8c8c8" stroke-width="1.5"/>
-            <rect x="88" y="33" width="6" height="7" rx="1" stroke="#d4b896" stroke-width="1.2"/>
-            <rect x="97" y="33" width="6" height="7" rx="1" stroke="#b8d4c8" stroke-width="1.2"/>
-            <circle cx="42" cy="38" r="12" stroke="#c0b8b0" stroke-width="1.8"/>
-            <path d="M30 65 Q42 58 54 65 L58 110 L26 110 Z" stroke="#c8c8c8" stroke-width="1.8" fill="none"/>
-            <ellipse cx="115" cy="112" rx="8" ry="6" stroke="#d4b896" stroke-width="1.5"/>
-            <path d="M107 108 L104 103 M123 108 L126 103" stroke="#d4b896" stroke-width="1.2"/>
-            <path d="M111 113 Q115 115 119 113" stroke="#d4b896" stroke-width="1"/>
-          </svg>
-        </div>
-        <div class="book-title">Cozy Company Studio</div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- PREVIEW -->
-<section id="preview">
-  <p class="section-label">Sneak preview</p>
-  <h2 class="section-title">Een eerste blik op kleurboeken voor organisaties</h2>
-  <p class="section-intro">
-    Elk kleurboek wordt ontworpen rond de wereld van één organisatie. Denk aan herkenbare locaties, iconische producten, collega’s, rituelen en rustige alledaagse momenten die samen een verhaal vertellen dat medewerkers, klanten en relaties direct herkennen.
-  </p>
-  <div class="coloring-strip">
-    <div class="strip-item">
-      <div class="strip-bg" style="background:#EBF0EB;">
-        <div class="strip-frame" style="transform:rotate(-2deg);">
+    <aside class="teaser-preview" aria-label="Sneak preview voorbeeldillustraties">
+      <div class="teaser-preview-header">
+        <p class="section-label">Sneak preview</p>
+        <h2 class="section-title">Een eerste blik op kleurboeken voor organisaties</h2>
+        <p class="section-intro">
+          Herkenbare scènes, rustige zwart-wit illustraties en een cozy stijl die uitnodigt om even offline tot rust te komen.
+        </p>
+      </div>
+      <div class="teaser-gallery">
+        <div class="teaser-card">
           <img src="images/gallery/gallery-01.png" alt="Voorbeeldillustratie — Luchtvaart" loading="lazy">
         </div>
-      </div>
-      <div class="strip-sector">Luchtvaart</div>
-    </div>
-    <div class="strip-item">
-      <div class="strip-bg" style="background:#F5EDE3;">
-        <div class="strip-frame" style="transform:rotate(1.5deg);">
+        <div class="teaser-card">
           <img src="images/gallery/gallery-02.png" alt="Voorbeeldillustratie — Openbaar vervoer" loading="lazy">
         </div>
-      </div>
-      <div class="strip-sector">Openbaar vervoer</div>
-    </div>
-    <div class="strip-item">
-      <div class="strip-bg" style="background:#E8E6E2;">
-        <div class="strip-frame" style="transform:rotate(-1deg);">
-          <img src="images/gallery/gallery-03.png" alt="Voorbeeldillustratie — Consumentenelektronica" loading="lazy">
-        </div>
-      </div>
-      <div class="strip-sector">Consumentenelektronica</div>
-    </div>
-    <div class="strip-item">
-      <div class="strip-bg" style="background:#EDE8F5;">
-        <div class="strip-frame" style="transform:rotate(2deg);">
-          <img src="images/gallery/gallery-04.png" alt="Voorbeeldillustratie — Onderwijs" loading="lazy">
-        </div>
-      </div>
-      <div class="strip-sector">Onderwijs</div>
-    </div>
-    <div class="strip-item">
-      <div class="strip-bg" style="background:#E8F0EE;">
-        <div class="strip-frame" style="transform:rotate(-1.5deg);">
+        <div class="teaser-card">
           <img src="images/gallery/gallery-05.png" alt="Voorbeeldillustratie — Hightech industrie" loading="lazy">
         </div>
       </div>
-      <div class="strip-sector">Hightech industrie</div>
-    </div>
-  </div>
-  <div class="gallery-disclaimer">
-    <strong>Preview:</strong> De afgebeelde kleurboeken zijn concepten ter illustratie. In definitieve boeken worden uitsluitend door de klant geautoriseerde elementen gebruikt.
-  </div>
-</section>
-
-<!-- LAUNCH -->
-<section id="launch">
-  <div class="pricing-inner">
-    <p class="section-label" style="color:rgba(250,247,242,0.5);">Augustus 2026</p>
-    <h2 class="section-title">De volledige website opent binnenkort</h2>
-    <p class="section-intro">
-      In augustus gaat Cozy Company Studio live met meer voorbeelden, uitleg over de werkwijze, prijsinformatie en een eenvoudige intake waarmee organisaties snel hun wensen, stijl, kernwaarden en beeldmateriaal kunnen aanleveren.
-    </p>
-
-    <div class="pricing-specs">
-      <div class="pricing-spec-item">
-        <span class="spec-l">Nu</span>
-        <span class="spec-v">Een warme preview van het concept en de stijl</span>
+      <div class="gallery-disclaimer">
+        <strong>Preview:</strong> Conceptbeelden ter illustratie. Definitieve boeken gebruiken uitsluitend door de klant geautoriseerde elementen.
       </div>
-      <div class="pricing-spec-item">
-        <span class="spec-l">Straks</span>
-        <span class="spec-v">Meer voorbeelden, intake en aanvraagmogelijkheid</span>
-      </div>
-      <div class="pricing-spec-item">
-        <span class="spec-l">Formulier</span>
-        <span class="spec-v">Nog gesloten tot de officiële livegang</span>
-      </div>
-      <div class="pricing-spec-item">
-        <span class="spec-l">Lancering</span>
-        <span class="spec-v">Augustus 2026</span>
-      </div>
-    </div>
+    </aside>
+  </section>
 
-    <div class="pricing-cta-wrap">
-      <a href="#about" class="pricing-main-cta">Wat komt eraan?</a>
-      <p class="pricing-footer-note">We werken achter de schermen aan de volledige website. Aanvragen openen bij de livegang.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <p class="section-label">Wat komt eraan</p>
-  <h2 class="section-title">Van herkenbare organisatie naar persoonlijk kleurboek</h2>
-  <p class="section-intro">
-    Cozy Company Studio vertaalt organisaties naar kleurboeken die warm, rustig en persoonlijk voelen. De illustraties worden gemaakt in een toegankelijke cozy stijl met grote open vlakken, herkenbare scènes en aandacht voor de kleine momenten die een organisatie eigen maken.
-  </p>
-  <div class="steps">
-    <div class="step">
-      <div class="step-number">01</div>
-      <div class="step-title">Intake</div>
-      <p class="step-desc">U deelt de wereld van uw organisatie: locaties, functies, kernwaarden, beeldmateriaal, stijl en gelegenheid.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">02</div>
-      <div class="step-title">Scènes</div>
-      <p class="step-desc">We vertalen die input naar herkenbare, rustige momenten die passen bij uw mensen en uw organisatie.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">03</div>
-      <div class="step-title">Illustraties</div>
-      <p class="step-desc">De pagina’s worden uitgewerkt als zwart-wit kleurplaten met een warme, uitnodigende uitstraling.</p>
-    </div>
-    <div class="step">
-      <div class="step-number">04</div>
-      <div class="step-title">Boek</div>
-      <p class="step-desc">Het eindresultaat is een fysiek kleurboek voor medewerkers, klanten, relaties of bijzondere momenten.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Cozy Company <span>Studio</span></div>
-  <div>© 2026 Cozy Company Studio · Live in augustus 2026</div>
-  <div class="footer-links">
-    <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacyverklaring</a>
-    <a href="voorwaarden.html" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a>
-  </div>
-</footer>
+  <footer class="teaser-footer">
+    <div class="footer-logo">Cozy Company <span>Studio</span></div>
+    <div>© 2026 Cozy Company Studio · Live in augustus 2026</div>
+  </footer>
+</main>
 
 <script src="js/script.js" defer></script>
 
