@@ -1,1 +1,275 @@
-<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Intake — Cozy Company Studio</title><meta name="description" content="Korte intake voor een op maat gemaakt kleurboek."><meta name="robots" content="noindex,follow"><link rel="stylesheet" href="css/style.css"><link rel="icon" href="favicon/favicon.svg" type="image/svg+xml"><style>.intake-page{padding-top:61px;background:var(--cream)}.intake-hero{background:var(--pale-sage);padding:90px 60px 70px}.intake-inner,.intake-card{max-width:980px;margin:0 auto}.intake-card{margin:-36px auto 80px;padding:46px;background:var(--warm-white);box-shadow:0 18px 60px rgba(28,26,23,.08)}.intake-section{padding:32px 0;border-top:1px solid rgba(28,26,23,.08)}.intake-section:first-child{border-top:0}.intake-section h2{font-family:'Playfair Display',serif;font-size:25px;margin-bottom:10px}.check-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 20px}.check-tile{display:flex;gap:9px;padding:12px;background:var(--cream);border:1px solid rgba(28,26,23,.08);font-size:13px}.collage-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0 18px}.collage-tile{min-height:130px;background:var(--cream);border:1px dashed rgba(28,26,23,.22);display:flex;align-items:center;justify-content:center;color:var(--mid-gray);font-size:12px}.source-links{display:flex;flex-wrap:wrap;gap:8px}.secondary-button{border:1px solid rgba(28,26,23,.18);background:transparent;color:var(--ink);padding:12px 18px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-family:'DM Sans',sans-serif;cursor:pointer}@media(max-width:900px){.intake-hero{padding:70px 24px 56px}.intake-card{margin:-28px 20px 60px;padding:28px}.check-grid,.collage-grid{grid-template-columns:1fr}}</style></head><body><nav><a href="index.html#hero" class="logo">Cozy Company <span>Studio</span></a><ul class="nav-links"><li><a href="index.html#gallery">Voorbeelden</a></li><li><a href="index.html#pricing">Tarieven</a></li><li><a href="index.html#how">Werkwijze</a></li><li><a href="intake.html">Intake</a></li><li><a href="index.html#contact">Contact</a></li></ul><div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></div></nav><div class="mobile-menu" id="mobileMenu"><a href="index.html#gallery" onclick="closeMenu()">Voorbeelden</a><a href="index.html#pricing" onclick="closeMenu()">Tarieven</a><a href="index.html#how" onclick="closeMenu()">Werkwijze</a><a href="intake.html" onclick="closeMenu()">Intake</a><a href="index.html#contact" onclick="closeMenu()">Contact</a></div><main class="intake-page"><header class="intake-hero"><div class="intake-inner"><p class="section-label">Korte intake</p><h1 class="hero-title">Alles voor een herkenbaar kleurboek, in één keer.</h1><p class="section-intro">Richttijd: 8–10 minuten. De nadruk ligt op do's & don'ts, gewenste scènes en links naar bestaand materiaal.</p></div></header><form id="intakeForm" class="intake-card" action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="9c12f8af-ad9e-4eb8-90c0-2cd06621a24f"><input type="hidden" name="subject" value="Nieuwe intake via Cozy Company Studio"><input type="checkbox" name="botcheck" style="display:none"><section class="intake-section"><h2>1. Organisatie</h2><div class="form-row"><div class="form-group"><label>Organisatienaam *</label><input id="organisatie" name="organisatie" required></div><div class="form-group"><label>Website</label><input id="website" name="website" type="url" placeholder="https://..."></div></div><div class="form-row"><div class="form-group"><label>Contactpersoon *</label><input id="contactpersoon" name="contactpersoon" required></div><div class="form-group"><label>E-mailadres *</label><input id="email" name="email" type="email" required></div></div></section><section class="intake-section"><h2>2. Doel en doelgroep</h2><div class="check-grid"><label class="check-tile"><input type="checkbox" name="doel[]" value="Onboarding">Onboarding</label><label class="check-tile"><input type="checkbox" name="doel[]" value="Klantgeschenk">Klantgeschenk</label><label class="check-tile"><input type="checkbox" name="doel[]" value="Medewerkersgeschenk">Medewerkersgeschenk</label><label class="check-tile"><input type="checkbox" name="doel[]" value="Event of beurs">Event of beurs</label><label class="check-tile"><input type="checkbox" name="doel[]" value="Jubileum">Jubileum</label><label class="check-tile"><input type="checkbox" name="doel[]" value="Employer branding">Employer branding</label></div><div class="check-grid"><label class="check-tile"><input type="checkbox" name="doelgroep[]" value="Medewerkers">Medewerkers</label><label class="check-tile"><input type="checkbox" name="doelgroep[]" value="Klanten">Klanten</label><label class="check-tile"><input type="checkbox" name="doelgroep[]" value="Relaties">Relaties</label><label class="check-tile"><input type="checkbox" name="doelgroep[]" value="Kinderen en families">Kinderen/families</label><label class="check-tile"><input type="checkbox" name="doelgroep[]" value="Sollicitanten">Sollicitanten</label><label class="check-tile"><input type="checkbox" name="doelgroep[]" value="Bezoekers">Bezoekers</label></div></section><section class="intake-section"><h2>3. Publieke informatie & collage</h2><p class="section-intro">Publieke informatie kan vooraf in deze pagina worden ingevuld via linkparameters. De klant corrigeert of vult dit aan.</p><div class="form-group"><label>Publieke samenvatting</label><textarea id="publieke_samenvatting" name="publieke_samenvatting" placeholder="Locaties, producten, diensten, kernwaarden of herkenbare objecten."></textarea></div><div id="sourceLinks" class="source-links"></div><div id="collageGrid" class="collage-grid"><div class="collage-tile">Publieke foto 1</div><div class="collage-tile">Publieke foto 2</div><div class="collage-tile">Publieke foto 3</div><div class="collage-tile">Publieke foto 4</div><div class="collage-tile">Publieke foto 5</div><div class="collage-tile">Publieke foto 6</div></div><div class="form-group"><label>Commentaar op de collage</label><textarea name="commentaar_collage" placeholder="Wat klopt, wat mist en wat past juist niet?"></textarea></div></section><section class="intake-section"><h2>4. Gewenste inhoud</h2><div class="check-grid"><label class="check-tile"><input type="checkbox" name="locaties[]" value="Kantoor">Kantoor</label><label class="check-tile"><input type="checkbox" name="locaties[]" value="Winkel of showroom">Winkel/showroom</label><label class="check-tile"><input type="checkbox" name="locaties[]" value="Productie of werkplaats">Productie/werkplaats</label><label class="check-tile"><input type="checkbox" name="locaties[]" value="Magazijn of logistiek">Magazijn/logistiek</label><label class="check-tile"><input type="checkbox" name="locaties[]" value="Buitenlocatie">Buitenlocatie</label><label class="check-tile"><input type="checkbox" name="locaties[]" value="Voertuigen">Voertuigen</label></div><div class="form-group"><label>Gewenste scènes *</label><textarea name="gewenste_scenes" placeholder="Noem 5 tot 10 rustige, herkenbare organisatiemomenten." required></textarea></div><div class="form-group"><label>Herkenbare functies, producten of objecten</label><textarea name="herkenbare_elementen" placeholder="Functies, uniformen, gebouwen, producten, voertuigen of rituelen."></textarea></div></section><section class="intake-section"><h2>5. Do's & don'ts</h2><div class="form-row"><div class="form-group"><label>Do's *</label><textarea name="dos" placeholder="Wat moet zeker terugkomen?" required></textarea></div><div class="form-group"><label>Don'ts *</label><textarea name="donts" placeholder="Wat mag niet worden getoond?" required></textarea></div></div></section><section class="intake-section"><h2>6. Materiaal</h2><div class="form-row"><div class="form-group"><label>Link naar stijlgids, kernwaarden of brandbook</label><input type="url" name="link_stijlgids"></div><div class="form-group"><label>Link naar fotomap, beeldbank of repository</label><input type="url" name="link_fotos"></div></div><div class="form-group"><label>Logo, cover en gebruik</label><textarea name="logo_cover_gebruik" placeholder="Logo op cover of in illustraties? Titel/ondertitel? Referentiegebruik toegestaan?"></textarea></div><label class="check-tile"><input type="checkbox" name="akkoord_rechten" value="Ja" required>Gedeelde links en materialen mogen gebruikt worden als referentie voor deze aanvraag.</label><p class="form-consent">Door deze intake te versturen gaat u akkoord met onze <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacyverklaring</a> en <a href="voorwaarden.html" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a>.</p><button type="submit" class="form-submit">Intake versturen</button> <button type="button" class="secondary-button" id="copyPrefillLink">Voorinvullink tonen</button></section></form></main><footer><div class="footer-logo">Cozy Company <span>Studio</span></div><div>© 2026 Cozy Company Studio · Alle rechten voorbehouden</div><div class="footer-links"><a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacyverklaring</a><a href="voorwaarden.html" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a></div></footer><div class="modal-overlay" id="modal-intake-success"><div class="modal-box contact-success-box"><h2>Intake verstuurd</h2><p>Dank u wel. De intake is succesvol verstuurd.</p><button type="button" class="modal-ok" onclick="closeModal('intake-success')">Ok</button></div></div><script src="js/script.js" defer></script><script src="js/intake.js" defer></script></body></html>
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Intake — Cozy Company Studio</title>
+  <meta name="description" content="Korte intake voor een op maat gemaakt Cozy Company Studio kleurboek.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <style>
+    .intake-page { padding-top: 61px; background: var(--cream); min-height: 100vh; }
+    .intake-hero { background: var(--pale-sage); padding: 90px 60px 70px; }
+    .intake-hero-inner { max-width: 960px; margin: 0 auto; }
+    .intake-hero .section-intro { margin-bottom: 0; max-width: 680px; }
+    .intake-wrap { max-width: 960px; margin: -36px auto 80px; padding: 0 0 20px; }
+    .intake-card { background: var(--warm-white); box-shadow: 0 18px 60px rgba(28,26,23,0.08); padding: 38px; margin-bottom: 18px; }
+    .intake-card h2 { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.2; margin-bottom: 10px; }
+    .intake-card p { color: var(--mid-gray); font-weight: 300; line-height: 1.7; margin-bottom: 20px; }
+    .intake-note { background: rgba(196,113,74,0.08); border-left: 3px solid var(--terracotta); padding: 14px 16px; font-size: 13px; color: var(--mid-gray); margin-top: 18px; }
+    .intake-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .choice-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .choice { display: flex; gap: 8px; align-items: flex-start; background: rgba(28,26,23,0.035); border: 1px solid rgba(28,26,23,0.08); padding: 12px; font-size: 13px; color: var(--ink); cursor: pointer; min-height: 46px; }
+    .choice input { margin-top: 3px; accent-color: var(--terracotta); }
+    .prefill-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; background: rgba(28,26,23,0.04); padding: 14px 16px; margin-top: 18px; }
+    .prefill-bar span { color: var(--mid-gray); font-size: 13px; }
+    .soft-button { border: 1px solid rgba(28,26,23,0.16); background: transparent; color: var(--ink); padding: 10px 16px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; font-family: 'DM Sans', sans-serif; cursor: pointer; }
+    .soft-button:hover { border-color: var(--terracotta); color: var(--terracotta); }
+    .collage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 18px; }
+    .collage-tile { min-height: 118px; background: linear-gradient(135deg, rgba(235,240,235,0.9), rgba(245,237,227,0.9)); border: 1px solid rgba(28,26,23,0.08); padding: 14px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; }
+    .collage-tile:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(28,26,23,0.11); }
+    .collage-tile strong { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--ink); line-height: 1.15; }
+    .collage-tile span { font-size: 11px; color: var(--terracotta); letter-spacing: 0.08em; text-transform: uppercase; }
+    .form-group.compact { margin-bottom: 14px; }
+    .required-hint { color: var(--terracotta); font-size: 12px; }
+    .intake-submit-row { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .intake-submit-row .form-consent { margin-top: 0; max-width: 620px; }
+    .intake-back { display: inline-block; margin-top: 24px; color: var(--ink); text-decoration: none; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--terracotta); padding-bottom: 3px; }
+
+    @media (max-width: 900px) {
+      .intake-hero { padding: 70px 24px 56px; }
+      .intake-wrap { margin: -28px 20px 60px; }
+      .intake-card { padding: 28px; }
+      .intake-grid, .choice-grid, .collage-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html#hero" class="logo">Cozy Company <span>Studio</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#gallery">Voorbeelden</a></li>
+      <li><a href="index.html#pricing">Tarieven</a></li>
+      <li><a href="index.html#how">Werkwijze</a></li>
+      <li><a href="intake.html">Intake</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#gallery" onclick="closeMenu()">Voorbeelden</a>
+    <a href="index.html#pricing" onclick="closeMenu()">Tarieven</a>
+    <a href="index.html#how" onclick="closeMenu()">Werkwijze</a>
+    <a href="intake.html" onclick="closeMenu()">Intake</a>
+    <a href="index.html#contact" onclick="closeMenu()">Contact</a>
+  </div>
+
+  <main class="intake-page">
+    <header class="intake-hero">
+      <div class="intake-hero-inner">
+        <p class="section-label">Projectintake</p>
+        <h1 class="hero-title">Alles voor uw kleurboek,<br><em>in ongeveer 10 minuten</em>.</h1>
+        <p class="section-intro">Vul alleen de belangrijkste keuzes aan: wat mag wel, wat mag niet en welke scènes moeten absoluut terugkomen. Links naar stijlgidsen, foto’s of beeldbanken zijn voldoende; uploaden is niet nodig.</p>
+      </div>
+    </header>
+
+    <form id="intakeForm" class="intake-wrap" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="9c12f8af-ad9e-4eb8-90c0-2cd06621a24f">
+      <input type="hidden" name="subject" value="Nieuwe projectintake via Cozy Company Studio">
+      <input type="hidden" name="from_name" value="Cozy Company Studio Intake">
+      <input type="checkbox" name="botcheck" style="display: none;">
+
+      <section class="intake-card">
+        <h2>1. Basisgegevens</h2>
+        <p>Een paar velden kunnen via de link naar deze intake al vooraf ingevuld zijn. Controleer ze en vul aan waar nodig.</p>
+        <div class="intake-grid">
+          <div class="form-group compact">
+            <label>Organisatie <span class="required-hint">*</span></label>
+            <input id="orgName" type="text" name="organisatie" placeholder="Naam organisatie" required>
+          </div>
+          <div class="form-group compact">
+            <label>Website of publieke bron</label>
+            <input id="orgWebsite" type="url" name="website" placeholder="https://www.organisatie.nl">
+          </div>
+          <div class="form-group compact">
+            <label>Contactpersoon <span class="required-hint">*</span></label>
+            <input type="text" name="contactpersoon" placeholder="Naam" required>
+          </div>
+          <div class="form-group compact">
+            <label>E-mailadres <span class="required-hint">*</span></label>
+            <input type="email" name="email" placeholder="u@organisatie.nl" required>
+          </div>
+        </div>
+        <div class="prefill-bar">
+          <button class="soft-button" type="button" id="prefillButton">Suggesties aanvullen</button>
+          <span>Gebaseerd op organisatienaam, website en algemene publieke sectorinformatie. De invuller corrigeert wat niet klopt.</span>
+        </div>
+      </section>
+
+      <section class="intake-card">
+        <h2>2. Doel en doelgroep</h2>
+        <p>Meerdere antwoorden zijn mogelijk.</p>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" name="doel[]" value="Onboarding"> Onboarding</label>
+          <label class="choice"><input type="checkbox" name="doel[]" value="Medewerker cadeau"> Medewerker cadeau</label>
+          <label class="choice"><input type="checkbox" name="doel[]" value="Klantgeschenk"> Klantgeschenk</label>
+          <label class="choice"><input type="checkbox" name="doel[]" value="Beurs of event"> Beurs of event</label>
+          <label class="choice"><input type="checkbox" name="doel[]" value="Employer branding"> Employer branding</label>
+          <label class="choice"><input type="checkbox" name="doel[]" value="Relatiegeschenk"> Relatiegeschenk</label>
+        </div>
+        <div class="choice-grid" style="margin-top:10px;">
+          <label class="choice"><input type="checkbox" name="doelgroep[]" value="Medewerkers"> Medewerkers</label>
+          <label class="choice"><input type="checkbox" name="doelgroep[]" value="Klanten"> Klanten</label>
+          <label class="choice"><input type="checkbox" name="doelgroep[]" value="Kinderen en families"> Kinderen en families</label>
+          <label class="choice"><input type="checkbox" name="doelgroep[]" value="Sollicitanten"> Sollicitanten</label>
+          <label class="choice"><input type="checkbox" name="doelgroep[]" value="Bezoekers"> Bezoekers</label>
+          <label class="choice"><input type="checkbox" name="doelgroep[]" value="Partners"> Partners</label>
+        </div>
+      </section>
+
+      <section class="intake-card">
+        <h2>3. Herkenbaarheid</h2>
+        <p>Vink aan wat belangrijk is om uw organisatie direct herkenbaar te maken.</p>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Gebouwen en gevels"> Gebouwen en gevels</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Werkplekken"> Werkplekken</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Uniformen of werkkleding"> Uniformen of werkkleding</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Producten of verpakkingen"> Producten of verpakkingen</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Voertuigen"> Voertuigen</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Logo subtiel gebruiken"> Logo subtiel gebruiken</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Kernwaarden"> Kernwaarden</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Lokale omgeving"> Lokale omgeving</label>
+          <label class="choice"><input type="checkbox" name="herkenbaarheid[]" value="Dagelijkse routines"> Dagelijkse routines</label>
+        </div>
+        <div class="form-group" style="margin-top:18px;">
+          <label>Kernwaarden of korte organisatiebeschrijving</label>
+          <textarea name="kernwaarden" placeholder="Bijvoorbeeld: nuchter, zorgzaam, technisch, gastvrij, innovatief..."></textarea>
+        </div>
+      </section>
+
+      <section class="intake-card">
+        <h2>4. Do's en don'ts</h2>
+        <p>Dit is de belangrijkste sectie. Geef vooral aan wat wel en niet mag worden afgebeeld.</p>
+        <div class="form-group">
+          <label>Do's: wat moet zeker terugkomen? <span class="required-hint">*</span></label>
+          <textarea name="dos" placeholder="Locaties, producten, mensen, sfeer, details, rituelen, herkenbare momenten..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label>Don'ts: wat mogen we niet gebruiken of suggereren? <span class="required-hint">*</span></label>
+          <textarea name="donts" placeholder="Verboden locaties, gevoelige onderwerpen, veiligheidsrisico’s, verkeerde uniformen, oude logo’s, niet-bestaande afdelingen..." required></textarea>
+        </div>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" name="gevoelige_context[]" value="Strenge hygiene"> Strenge hygiëne</label>
+          <label class="choice"><input type="checkbox" name="gevoelige_context[]" value="Veiligheidszones"> Veiligheidszones</label>
+          <label class="choice"><input type="checkbox" name="gevoelige_context[]" value="Geen dieren passend"> Geen dieren passend</label>
+          <label class="choice"><input type="checkbox" name="gevoelige_context[]" value="Geen herkenbare personen"> Geen herkenbare personen</label>
+          <label class="choice"><input type="checkbox" name="gevoelige_context[]" value="Geen logo zonder akkoord"> Geen logo zonder akkoord</label>
+          <label class="choice"><input type="checkbox" name="gevoelige_context[]" value="Vertrouwelijke processen"> Vertrouwelijke processen</label>
+        </div>
+      </section>
+
+      <section class="intake-card">
+        <h2>5. Gewenste scènes</h2>
+        <p>Noem 5 tot 10 kleine, rustige organisatiemomenten. Denk aan dagelijkse situaties, geen grote campagnes of actiescènes.</p>
+        <div class="form-group">
+          <label>Scène-ideeën <span class="required-hint">*</span></label>
+          <textarea name="gewenste_scenes" placeholder="Bijvoorbeeld: een medewerker opent rustig de winkel, een monteur controleert zorgvuldig een onderdeel, collega’s bereiden samen een pakket voor..." required></textarea>
+        </div>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" name="scene_type[]" value="Mensen aan het werk"> Mensen aan het werk</label>
+          <label class="choice"><input type="checkbox" name="scene_type[]" value="Rustige pauzemomenten"> Rustige pauzemomenten</label>
+          <label class="choice"><input type="checkbox" name="scene_type[]" value="Productdetail"> Productdetail</label>
+          <label class="choice"><input type="checkbox" name="scene_type[]" value="Gebouw of ruimte"> Gebouw of ruimte</label>
+          <label class="choice"><input type="checkbox" name="scene_type[]" value="Voor openingstijd"> Voor openingstijd</label>
+          <label class="choice"><input type="checkbox" name="scene_type[]" value="Achter de schermen"> Achter de schermen</label>
+        </div>
+      </section>
+
+      <section class="intake-card">
+        <h2>6. Publieke fotocollage</h2>
+        <p>Op basis van de organisatienaam maken we zoektegels voor publiek toegankelijke beelden. Open de tegels, bekijk wat herkenbaar is en geef hieronder commentaar. Zo hoeft u geen zware bestanden te uploaden.</p>
+        <div class="collage-grid" id="collageGrid"></div>
+        <div class="form-group">
+          <label>Commentaar op de publieke beeldselectie</label>
+          <textarea name="collage_commentaar" placeholder="Wat klopt wel? Wat klopt niet? Welke beelden, locaties of details mogen we als referentie gebruiken?"></textarea>
+        </div>
+        <div class="intake-note">Gebruik publieke beelden alleen als oriëntatie. Voor exacte logo’s, huisstijl en interne locaties is een link naar uw eigen map of stijlgids betrouwbaarder.</div>
+      </section>
+
+      <section class="intake-card">
+        <h2>7. Links naar materiaal</h2>
+        <p>Plak links naar mappen of documenten. Google Drive, OneDrive, Dropbox, SharePoint, DAM-systemen en beeldbanken zijn allemaal geschikt.</p>
+        <div class="intake-grid">
+          <div class="form-group compact">
+            <label>Stijlgids / brandbook</label>
+            <input type="url" name="link_stijlgids" placeholder="https://...">
+          </div>
+          <div class="form-group compact">
+            <label>Logo's en brand assets</label>
+            <input type="url" name="link_logos" placeholder="https://...">
+          </div>
+          <div class="form-group compact">
+            <label>Fotomap / beeldbank</label>
+            <input type="url" name="link_fotos" placeholder="https://...">
+          </div>
+          <div class="form-group compact">
+            <label>Company photo repository</label>
+            <input type="url" name="link_repository" placeholder="https://...">
+          </div>
+        </div>
+      </section>
+
+      <section class="intake-card">
+        <h2>8. Cover en toestemming</h2>
+        <div class="form-group">
+          <label>Coverwens of titel</label>
+          <textarea name="coverwens" placeholder="Titel, ondertitel, sfeer of elementen die op de voorpagina moeten komen..."></textarea>
+        </div>
+        <div class="choice-grid">
+          <label class="choice"><input type="checkbox" name="toestemming[]" value="Logo mag op cover"> Logo mag op cover</label>
+          <label class="choice"><input type="checkbox" name="toestemming[]" value="Logo mag subtiel in illustraties"> Logo mag subtiel in illustraties</label>
+          <label class="choice"><input type="checkbox" name="toestemming[]" value="Organisatienaam mag als referentie"> Organisatienaam mag als referentie</label>
+          <label class="choice"><input type="checkbox" name="toestemming[]" value="Beelden mogen niet publiek gedeeld worden"> Beelden niet publiek delen</label>
+          <label class="choice"><input type="checkbox" name="toestemming[]" value="Alleen na schriftelijk akkoord publiceren"> Publiceren alleen na akkoord</label>
+          <label class="choice"><input type="checkbox" name="toestemming[]" value="Herhaalbestelling mogelijk"> Herhaalbestelling mogelijk</label>
+        </div>
+        <p class="form-consent" style="margin-top:18px;">
+          Door de intake te versturen gaat u akkoord met onze
+          <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacyverklaring</a>
+          en
+          <a href="voorwaarden.html" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a>.
+        </p>
+        <div class="intake-submit-row">
+          <button type="submit" class="form-submit">Intake versturen</button>
+          <span class="form-consent">Gemiddelde invultijd: ongeveer 10 minuten. U kunt later altijd materiaal aanvullen via een gedeelde map.</span>
+        </div>
+        <a href="index.html" class="intake-back">Terug naar website</a>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-logo">Cozy Company <span>Studio</span></div>
+    <div>© 2026 Cozy Company Studio · Alle rechten voorbehouden</div>
+    <div class="footer-links">
+      <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacyverklaring</a>
+      <a href="voorwaarden.html" target="_blank" rel="noopener noreferrer">Algemene Voorwaarden</a>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="modal-intake-success" onclick="closeModalOutside(event, 'intake-success')">
+    <div class="modal-box contact-success-box" role="dialog" aria-modal="true" aria-labelledby="intake-success-title">
+      <h2 id="intake-success-title">Intake verstuurd</h2>
+      <p>Dank u wel. De intake is succesvol verstuurd. We gebruiken deze input om de eerste scènes en coverrichting voor te bereiden.</p>
+      <button type="button" class="modal-ok" onclick="closeModal('intake-success')">Ok</button>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+  <script src="js/intake.js" defer></script>
+</body>
+</html>
