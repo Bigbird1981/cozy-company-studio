@@ -46,7 +46,8 @@ body.teaser-page .mobile-menu { display: none; }
 .teaser-copy .hero-eyebrow { margin-bottom: 10px; }
 
 .teaser-copy .hero-title {
-  font-size: clamp(22px, 2.87vw, 38px);
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.15;
   max-width: 560px;
   margin-bottom: 14px;
 }
