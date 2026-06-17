@@ -22,7 +22,7 @@
       width: 100%;
       justify-content: space-between;
       gap: 24px;
-      padding: 14px 60px;
+      padding: 10px 60px;
     }
     body.teaser-page .nav-links,
     body.teaser-page .nav-hamburger,
@@ -41,7 +41,7 @@
     }
 
     .teaser-shell {
-      min-height: calc(100vh - 57px);
+      min-height: calc(100vh - 49px);
       padding-top: 0;
       display: grid;
       grid-template-rows: minmax(0, 1fr) auto;
@@ -124,10 +124,10 @@
     }
 
     .desktop-qr img {
-      width: 86px;
-      height: 86px;
+      width: 108px;
+      height: 108px;
       display: block;
-      background: var(--warm-white);
+      background: #ffffff;
     }
 
     .desktop-qr span {
@@ -141,7 +141,7 @@
 
     .teaser-preview {
       background: var(--pale-sage);
-      padding: 0 clamp(28px, 4vw, 56px) 26px;
+      padding: 18px clamp(28px, 4vw, 56px) 26px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -212,18 +212,18 @@
     }
 
     @media (max-width: 1000px) {
-      body.teaser-page nav { align-items: center; padding: 14px 24px; }
+      body.teaser-page nav { align-items: center; padding: 10px 24px; }
       .nav-launch-note { font-size: clamp(14px, 3.3vw, 26px); white-space: nowrap; text-align: right; }
       .teaser-main { grid-template-columns: 1fr; }
       .teaser-copy { padding: 0 24px 22px; }
-      .teaser-preview { padding: 0 24px 28px; }
+      .teaser-preview { padding: 18px 24px 28px; }
       .desktop-qr { display: none; }
       .teaser-footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
     }
 
     @media (max-width: 620px) {
       .teaser-shell { min-height: auto; }
-      body.teaser-page nav { gap: 10px; padding: 12px 24px; }
+      body.teaser-page nav { gap: 10px; padding: 10px 24px; }
       body.teaser-page .logo { font-size: 16px; }
       .nav-launch-note { font-size: clamp(11px, 3.2vw, 16px); white-space: nowrap; }
       .teaser-gallery { grid-template-columns: repeat(3, 46vw); overflow-x: auto; padding: 8px 24px 18px; margin: 0 -24px; }
@@ -264,7 +264,7 @@
         <a href="mailto:hallo@cozycompanystudio.nl">hallo@cozycompanystudio.nl</a>
       </div>
       <div class="desktop-qr" aria-label="QR-code om de website op mobiel te bekijken">
-        <img src="images/qr-mobile.svg" alt="QR-code naar Cozy Company Studio">
+        <img src="images/qr-mobile.svg?v=2" alt="QR-code naar Cozy Company Studio">
         <span>Bekijk<br>op mobiel</span>
       </div>
     </div>
