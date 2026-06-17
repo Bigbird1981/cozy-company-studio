@@ -17,37 +17,29 @@
 
   <style>
     body.teaser-page { min-height: 100vh; overflow-x: hidden; }
-    body.teaser-page nav { justify-content: flex-start; }
+    body.teaser-page nav {
+      justify-content: space-between;
+      gap: 24px;
+    }
     body.teaser-page .nav-links,
     body.teaser-page .nav-hamburger,
     body.teaser-page .mobile-menu { display: none; }
+
+    .nav-launch-note {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(22px, 2.4vw, 36px);
+      line-height: 1;
+      color: var(--sage);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
 
     .teaser-shell {
       min-height: calc(100vh - 61px);
       padding-top: 61px;
       display: grid;
-      grid-template-rows: auto minmax(0, 1fr) auto;
-    }
-
-    .launch-ribbon {
-      min-height: 96px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(135deg, var(--pale-sage), #F5EDE3);
-      color: var(--sage);
-      padding: 20px 24px;
-      border-bottom: 4px solid rgba(196,113,74,0.24);
-    }
-
-    .launch-ribbon h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(27px, 3.9vw, 51px);
-      line-height: 1;
-      letter-spacing: -0.03em;
-      font-weight: 700;
-      margin: 0;
+      grid-template-rows: minmax(0, 1fr) auto;
     }
 
     .teaser-main {
@@ -73,9 +65,9 @@
     }
 
     .teaser-copy .hero-subtitle {
-      max-width: 610px;
-      margin-bottom: 12px;
-      line-height: 1.65;
+      max-width: 650px;
+      margin-bottom: 14px;
+      line-height: 1.62;
     }
 
     .teaser-copy .hero-occasions { margin-bottom: 18px; }
@@ -125,13 +117,9 @@
       overflow: hidden;
     }
 
-    .teaser-preview-header {
-      max-width: 520px;
-    }
-
+    .teaser-preview-header { max-width: 520px; }
     .teaser-preview-header .section-label { margin-bottom: 10px; }
     .teaser-preview-header .section-title { margin-bottom: 12px; }
-
     .teaser-preview-header .section-intro {
       margin-bottom: 0;
       max-width: 520px;
@@ -192,17 +180,18 @@
     }
 
     @media (max-width: 1000px) {
+      body.teaser-page nav { align-items: flex-start; }
+      .nav-launch-note { font-size: clamp(19px, 4vw, 30px); white-space: normal; text-align: right; }
       .teaser-main { grid-template-columns: 1fr; }
       .teaser-copy { padding: 24px 24px 22px; }
       .teaser-preview { padding: 22px 24px 28px; }
-      .launch-ribbon { min-height: 88px; }
       .teaser-footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; }
     }
 
     @media (max-width: 620px) {
       .teaser-shell { min-height: auto; }
-      .launch-ribbon { min-height: 78px; padding: 20px 20px; }
-      .launch-ribbon h1 { font-size: clamp(24px, 7.5vw, 38px); }
+      body.teaser-page nav { gap: 14px; }
+      .nav-launch-note { font-size: 18px; }
       .teaser-gallery { grid-template-columns: repeat(3, 46vw); overflow-x: auto; padding: 8px 24px 18px; margin: 0 -24px; }
       .teaser-card { min-width: 0; }
     }
@@ -213,13 +202,10 @@
 
 <nav>
   <a href="#" class="logo">Cozy Company <span>Studio</span></a>
+  <div class="nav-launch-note">Live eind Augustus 2026</div>
 </nav>
 
 <main class="teaser-shell">
-  <header class="launch-ribbon" aria-label="Lancering">
-    <h1>Live eind Augustus 2026</h1>
-  </header>
-
   <section class="teaser-main" aria-label="Teaser Cozy Company Studio">
     <div class="teaser-copy">
       <p class="hero-eyebrow">Op maat gemaakte kleurboeken voor organisaties</p>
@@ -229,10 +215,7 @@
         tot leven gebracht.
       </h2>
       <p class="hero-subtitle">
-        Cozy Company Studio maakt exclusieve kleurboeken rond herkenbare werkplekken, producten, collega’s en kleine momenten uit het dagelijkse werk.
-      </p>
-      <p class="hero-subtitle">
-        Achter de schermen bouwen we aan de volledige website, voorbeeldpagina’s en een slimme intake. Het contactformulier blijft gesloten tot de officiële livegang.
+        Kleuren is populairder dan ooit: het brengt ontspanning, focus en een moment offline rust. Cozy Company Studio maakt exclusieve, volledig custom kleurboeken voor organisaties, met herkenbare werkplekken, producten en kleine momenten uit het dagelijkse werk. Eind augustus 2026 gaan we live.
       </p>
       <div class="hero-occasions">
         <span class="occasion-tag">Kerst</span>
