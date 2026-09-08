@@ -90,6 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var heroRight = document.querySelector('.hero-right');
   if (!heroRight) return;
 
+  var style = document.createElement('style');
+  style.textContent = '.hero-right.has-hero-video{padding:0;align-items:stretch;justify-content:stretch}.hero-video-wrap{width:100%;height:100%;min-height:400px;display:flex;background:#EBF0EB;overflow:hidden}.hero-video{width:100%;height:100%;object-fit:cover;display:block}';
+  document.head.appendChild(style);
+
   var video = document.createElement('video');
   video.className = 'hero-video';
   video.autoplay = true;
@@ -109,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
   videoWrap.appendChild(video);
 
   video.addEventListener('loadeddata', function() {
+    heroRight.classList.add('has-hero-video');
     heroRight.innerHTML = '';
     heroRight.appendChild(videoWrap);
     video.play().catch(function() {});
