@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
   video.setAttribute('aria-label', 'Cozy Company Studio videopreview');
 
   var source = document.createElement('source');
-  source.src = 'videos/Cozy%20Company%20Studio.mp4';
+  source.src = 'videos/cozy-company-studio.mp4';
   source.type = 'video/mp4';
   video.appendChild(source);
 
