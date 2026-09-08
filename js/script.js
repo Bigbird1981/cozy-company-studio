@@ -45,6 +45,12 @@ document.addEventListener('keydown', function(e) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  var layoutStyle = document.createElement('style');
+  layoutStyle.textContent = '.hero-subtitle,.section-intro{max-width:none;width:100%;}.hero-left{max-width:none;}.contact-left .section-title{max-width:none;}@media(min-width:901px){.hero-subtitle{max-width:760px;}.section-intro{max-width:900px;}#pricing .section-intro{max-width:900px;}.pricing-footer-note{max-width:720px;}}';
+  document.head.appendChild(layoutStyle);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
   var form = document.getElementById('contactForm');
   if (!form) return;
 
