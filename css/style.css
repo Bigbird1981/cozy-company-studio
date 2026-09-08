@@ -34,12 +34,12 @@
   .mobile-menu a { text-decoration: none; font-size: 14px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); padding: 14px 0; border-bottom: 1px solid rgba(28,26,23,0.06); }
 
   /* ─── HERO ─── */
-  #hero { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; padding-top: 61px; }
-  .hero-left { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+  #hero { min-height: 100vh; display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.65fr); padding-top: 61px; }
+  .hero-left { padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; max-width: none; min-width: 0; }
   .hero-eyebrow { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 24px; }
-  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 56px); line-height: 1.1; font-weight: 700; margin-bottom: 24px; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(36px, 4vw, 56px); line-height: 1.1; font-weight: 700; margin-bottom: 24px; max-width: none; }
   .hero-title em { font-style: italic; color: var(--terracotta); }
-  .hero-subtitle { font-size: 16px; font-weight: 300; color: var(--mid-gray); line-height: 1.75; max-width: 440px; margin-bottom: 20px; }
+  .hero-subtitle { font-size: 16px; font-weight: 300; color: var(--mid-gray); line-height: 1.75; max-width: none; width: 100%; margin-bottom: 20px; overflow-wrap: normal; word-break: normal; hyphens: none; }
   .hero-occasions { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px; }
   .occasion-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; border: 1px solid rgba(196,113,74,0.35); color: var(--terracotta); padding: 5px 12px; border-radius: 20px; }
   .hero-cta { display: inline-block; background: var(--ink); color: var(--cream); padding: 15px 34px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: background 0.2s; width: fit-content; }
@@ -57,8 +57,8 @@
   /* ─── SECTION SHARED ─── */
   section { padding: 90px 60px; }
   .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 14px; }
-  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); line-height: 1.15; margin-bottom: 18px; max-width: 600px; }
-  .section-intro { font-size: 15px; color: var(--mid-gray); max-width: 560px; font-weight: 300; line-height: 1.75; margin-bottom: 52px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3vw, 40px); line-height: 1.15; margin-bottom: 18px; max-width: none; }
+  .section-intro { font-size: 15px; color: var(--mid-gray); max-width: none; width: 100%; font-weight: 300; line-height: 1.75; margin-bottom: 52px; overflow-wrap: normal; word-break: normal; hyphens: none; }
 
   /* ─── GALLERY ─── */
   #gallery { background: var(--cream); }
@@ -90,7 +90,7 @@
   #pricing .pricing-inner { padding: 0 60px; }
   #pricing .section-title { color: var(--cream); }
   #pricing .section-title em { font-style: italic; color: var(--terracotta); }
-  #pricing .section-intro { color: rgba(250,247,242,0.6); max-width: 600px; }
+  #pricing .section-intro { color: rgba(250,247,242,0.6); max-width: none; width: 100%; }
 
   .pricing-specs {
     display: flex; gap: 0; margin-bottom: 52px;
@@ -127,7 +127,7 @@
   .pricing-cta-wrap { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
   .pricing-main-cta { display: inline-block; background: var(--terracotta); color: white; padding: 16px 40px; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; font-weight: 500; transition: background 0.2s; }
   .pricing-main-cta:hover { background: #b5633e; }
-  .pricing-footer-note { font-size: 11px; color: rgba(250,247,242,0.35); font-style: italic; font-family: 'Playfair Display', serif; max-width: 440px; }
+  .pricing-footer-note { font-size: 11px; color: rgba(250,247,242,0.35); font-style: italic; font-family: 'Playfair Display', serif; max-width: none; width: 100%; }
 
   /* ─── HOW IT WORKS ─── */
   #how { background: var(--warm-white); }
@@ -135,11 +135,11 @@
   .step { border-top: 2px solid var(--ink); padding-top: 22px; }
   .step-number { font-family: 'Playfair Display', serif; font-size: 11px; color: var(--mid-gray); margin-bottom: 14px; }
   .step-title { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 700; margin-bottom: 8px; line-height: 1.2; }
-  .step-desc { font-size: 13px; color: var(--mid-gray); line-height: 1.65; font-weight: 300; }
+  .step-desc { font-size: 13px; color: var(--mid-gray); line-height: 1.65; font-weight: 300; overflow-wrap: normal; word-break: normal; hyphens: none; }
 
   /* ─── CONTACT ─── */
   #contact { background: var(--pale-sage); display: grid; grid-template-columns: 1fr 1fr; gap: 70px; }
-  .contact-left .section-title { max-width: 400px; }
+  .contact-left .section-title { max-width: none; }
   .contact-detail { display: flex; flex-direction: column; gap: 16px; margin-top: 30px; }
   .contact-item { font-size: 14px; color: var(--mid-gray); }
   .contact-item strong { color: var(--ink); font-weight: 500; }
