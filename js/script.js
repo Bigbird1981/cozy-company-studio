@@ -85,3 +85,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  var heroRight = document.querySelector('.hero-right');
+  if (!heroRight) return;
+
+  var video = document.createElement('video');
+  video.className = 'hero-video';
+  video.autoplay = true;
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.preload = 'metadata';
+  video.setAttribute('aria-label', 'Cozy Company Studio videopreview');
+
+  var source = document.createElement('source');
+  source.src = 'videos/cozy-company-studio.mp4';
+  source.type = 'video/mp4';
+  video.appendChild(source);
+
+  var videoWrap = document.createElement('div');
+  videoWrap.className = 'hero-video-wrap';
+  videoWrap.appendChild(video);
+
+  video.addEventListener('loadeddata', function() {
+    heroRight.innerHTML = '';
+    heroRight.appendChild(videoWrap);
+    video.play().catch(function() {});
+  });
+});
